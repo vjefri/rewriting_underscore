@@ -1,12 +1,14 @@
-function map (collection, callback) {
-  var result = [];
-  collection.forEach(function(val) {
-    result.push(callback(val));
-  });
-  return result;
+function contains (collection, target) {
+	var flag = false;
+	collection.forEach(function(val) {
+		if (target === val) {
+			flag = true; 
+		}
+	});
+	return flag;
 }
-var multiplyBy2 = map([1, 2, 3, 4, 5], function(val) {
- return val * 2;
-});
 
-console.log(multiplyBy2)
+console.log (
+	contains([1, 2, 3, 4, 5], 1), // true
+	contains([1, 2, 3, 4, 5], 0) // false
+	)
