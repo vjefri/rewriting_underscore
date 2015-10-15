@@ -22,3 +22,6 @@ function zip() {
 
 console.log(zip(['fred', 'barney'], [30, 40], [true, false]));
 // [['fred', 30, true], ['barney', 40, false]]
+
+console.log(zip(['fred', 'barney', 'jake'], [30, 40, 20], [true, false, true]));
+// [['fred', 30, true], ['barney', 40, false], ['jake', 20, true]]
