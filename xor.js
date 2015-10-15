@@ -12,9 +12,11 @@ function unique(arr) {
 }
 
 function xor() {
-        var args = [].slice.call(arguments);
-    return args.map(unique).reduce(function(previous, current) {
-        return complement(previous, current).concat(complement(current, previous));
+    var args = [].slice.call(arguments);
+
+    return args.map(unique).reduce(function(acc, val) {
+    	// get the unique values from one array, then from the next and join them. 
+    	return complement(acc, val).concat(complement(val, acc));
     });
 }
 
