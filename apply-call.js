@@ -9,4 +9,17 @@ var result2 = [].concat.apply(arr1, [arr2, arr3]);
 console.log('Call Result: ',result1);
 console.log('Apply Result: ', result2);
 
+var game = {
+	count: 0
+}
 
+function updateCount() {
+	for (var i = 0; i < arguments.length; i++) {
+		this.count += arguments[i];
+	}
+}
+
+// this points to the game object
+updateCount.apply(game, [1, 2, 3]);
+
+console.log(game.count);

@@ -1,7 +1,7 @@
 function pluck(list, propertyName) {
 	var result = [];
-	list.forEach(function(val) {
-		result.push(val[propertyName]);
+	list.forEach(function(obj) {
+		result.push(obj[propertyName]);
 	});
 	return result; 
 }
