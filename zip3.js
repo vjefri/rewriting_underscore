@@ -5,12 +5,9 @@ function zip(arrays) {
         return max;
     }, 0);
 
-    // get the range of numbers from 0 - 3
+    // I don't think I can solve it using reduce. 
 
-    return length;
 }
-
-
 
 console.log(zip([
     [1, 2, 3, 4],

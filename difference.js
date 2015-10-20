@@ -21,3 +21,22 @@ function difference(arr, exArr) {
 
 // tests //
 console.log(difference([1, 2, 3], [4, 2])); //[1, 3]
+
+function difference2(A, B) {
+    var map = {};
+    var result = [];
+
+    A.forEach(function(val) {
+        map[val] = 1;
+    });
+
+    B.forEach(function(val) {
+        map[val]++;
+    });
+
+    for (var key in map) {
+        if (map[key] === 1) result.push(Number(key));
+    }
+
+    return result;
+}

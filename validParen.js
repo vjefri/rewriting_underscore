@@ -18,23 +18,27 @@
 // 	return false; 
 // }
 
-// function validParentheses(parens){
-// 	// this makes it true or false. open is the counter, you want ti to be 0 to return true. 
-//   return 0 == parens.split("").reduce(function (open, paren) {
-//     if (open >= 0) {
-//     	// executes the right side first
-//       open += paren == '(' ? 1 : 0;
-//       open -= paren == ')' ? 1 : 0;
-//     }
-//     return open;
-//   }, 0);
-// }
+function validParentheses(parens){
+	// this makes it true or false. open is the counter, you want ti to be 0 to return true. 
+  return 0 == parens.split("").reduce(function (open, paren) {
+    if (open >= 0) {
+    	// open keeps track of valid paren
+    	
+      open += paren == '(' ? 1 : 0;
+      open -= paren == ')' ? 1 : 0;
+    }
+    return open;
+  }, 0);
+}
 
 function validParentheses(parens){
   var indent = 0;
   
   for (var i = 0 ; i < parens.length && indent >= 0; i++) {
-    indent += (parens[i] == '(') ? 1 : -1;    
+  	// if indent ever gets below zero then the paren is invalid
+    indent += (parens[i] == '(') ? 1 : -1;
+    // the first paren has to be open paren, add to indent(keeps track of open and closed paren). if open 1, if closed -1
+
     console.log(indent);
   }
   

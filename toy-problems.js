@@ -107,7 +107,8 @@ function difference(A, B) {
     }
 }
 
-// console.log(difference(arr1, arr2));
+
+console.log(difference(arr1, arr2));
 
 /*
 
